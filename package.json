@@ -1,6 +1,6 @@
 {
   "name": "bee-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "BeeJs is a front-end web framework developed by the Bee team",
   "main": "index.js",
   "scripts": {
