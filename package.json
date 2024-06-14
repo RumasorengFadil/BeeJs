@@ -1,0 +1,24 @@
+{
+  "name": "bee-js",
+  "version": "1.0.3",
+  "description": "BeeJs is a front-end web framework developed by the Bee team",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel public/index.html",
+    "jsdoc": "npx jsdoc nama-file.js",
+    "release": "standard-version"
+  },
+  "author": "Fadil Hijayat Rumasoreng",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "jsdoc": "^4.0.3",
+    "parcel": "^2.11.0",
+    "process": "^0.11.10",
+    "standard-version": "^9.5.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

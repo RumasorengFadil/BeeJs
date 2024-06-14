@@ -1,0 +1,20 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <symbol fill="none" id="icon-sound-enabled" viewBox="0 -2 31 29">
+            <path d="M14.1729 5.69012L9.17285 9.69012H5.17285V15.6901H9.17285L14.1729 19.6901V5.69012Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22.2429 5.62012C24.1176 7.49539 25.1708 10.0385 25.1708 12.6901C25.1708 15.3418 24.1176 17.8848 22.2429 19.7601M18.7129 9.15012C19.6502 10.0878 20.1768 11.3593 20.1768 12.6851C20.1768 14.0109 19.6502 15.2825 18.7129 16.2201" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol fill="none" id="icon-sound-disabled" viewBox="-3 -2.8 31 29">
+           <path d="M11 5L6 9H2V15H6L11 19V5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23 9L17 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17 9L23 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol fill="none" id="icon-arrow-left" viewBox="0 0 24 24">
+           <path d="M21.0001 11H6.41406L11.7071 5.707L10.2931 4.293L2.58606 12L10.2931 19.707L11.7071 18.293L6.41406 13H21.0001V11Z" fill="black"/>
+        </symbol>
+    </defs>
+</svg>
+
+

@@ -1,0 +1,61 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+
+    - name: Bump version and create changelog
+      id: bump_version
+      run: |
+        npm run release
+        NEW_VERSION=$(node -p "require('./package.json').version")
+        echo "::set-output name=new_version::$NEW_VERSION"
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
+
+    - name: Push changes and tags
+      run: |
+        git push --follow-tags origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
+
+    - name: Create GitHub Release
+      uses: actions/create-release@v1
+      with:
+        tag_name: ${{ steps.bump_version.outputs.new_version }}
+        release_name: Release ${{ steps.tag.outputs.new_version }}
+        body: |
+          Changes in this release:
+          - List changes here
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
