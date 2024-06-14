@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import RoomAudio from "../../RoomAudio";
+import RoomAudio from "../RoomAudio";
 
 class View{
     static _parentEl = createRoot(document.getElementById("root"));
